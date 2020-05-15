@@ -1,11 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather API</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" >
+	<title>7-Day Weather Forecast</title>
+
 </head>
 <body>
-    
+<div class="wrapper">
+	<div class="container">
+		<form>
+	    	<input type="text" name="city-name" class="textbox" id="city-name" placeholder="Type city (i.e., 'London')">
+	    	<input type="submit" name="button" class="button" id="getWeather" value="Get 7-Day Weather Forecast">
+	    </form>
+	    <h2 id="results" class="results">
+        <div class="initial">Get Your 7-day Weather Forecast</div>
+      </div></h2>
+        <div class="clearfix"></div>
+    </div>
+ </div>
+
+<script id="weather-spot" type="text/x-handlebars-template">
+	<div class="section">
+		<h2 class="date">{{now}}</h2>
+		<div class="weather-description">
+			<div id="weather-info">
+				<h2>Average: {{average}}&deg;</h2>
+				<h3>High: {{high}}&deg;</h3>
+				<h3>Low: {{low}}&deg;</h3>
+                <h3>Morning: {{morning}}&deg;</h3>
+                <h3>Night: {{nighttime}}&deg;</h3>
+				<img class="cloud-image" src="http://webdesignertroy.com/dump/clouds/cloud-{{cloudInfo}}.jpg" alt="{{cloudInfoText}}" title="{{cloudInfoText}}">
+			</div>	
+		</div>
+    </div>
+</script>
+
 </body>
 </html>
